@@ -8,6 +8,7 @@ use std::io;
 use std::str;
 use rand::Rng;
 use rand::distributions::{Distribution, Standard};
+use colored::*;
 
 enum RockPaperScissorsLizardSpockGuess {
     Rock,
@@ -202,8 +203,10 @@ fn main() {
     //
     // Game Intro
     //
+    println!("\n");
     println!("Hello, I'm Dr. Sheldon Cooper, Lets play Rock, Paper, Scissors, Lizard and Spock! \n");
-    println!("Let's play best 3 out of 5 rounds. \nAre you able to beat a genius?\n");
+    println!("How about best 3 out of 5 rounds? \n");
+    println!("{}", "Are you able to beat a genius?\n".italic().blue());
 
     let mut player_wins = 0;
     let mut comp_wins = 0;
@@ -283,11 +286,11 @@ fn main() {
         //
         println!("");
         if player_wins == 3 {
-            println!("Congratulations, You won the game!\n");
+            println!("{}","Congratulations, You won the game!\n".italic().green());
             break;
         } else if comp_wins == 3 {
             println!("Congratulations, You won.... \n");
-            println!("Bazinga!! You lost the game! \n");
+            println!("{}", "Bazinga!! You lost the game! \n".italic().yellow());
             break;
         } else {
             println!("You have {} wins, and I have {} wins.\n", player_wins, comp_wins);
@@ -295,6 +298,7 @@ fn main() {
     }
 
     if quit == true {
-        println!("Well... thanks for playing.  Sorry you had to leave so soon. Hey!! That's My Spot");
+        println!("Well... thanks for playing.  Sorry you had to leave so soon.\n");
+        println!("{}", "Hey!! That's My Spot".red());
     }
 }
