@@ -1,4 +1,4 @@
-# rock-paper-scissors-lizard-spock
+# rock-paper-scissors-lizard-spock <img src="img/Rock-Paper-Scissor-Lizard-Spock.jpg" width="200" align="right" />
 A custom version of the popular game [Rock, Paper, Scissors.](https://en.wikipedia.org/wiki/Rock_paper_scissors)
 made with Rust and inspired by the one seen on The Big Bang Theory sitcom.
 
